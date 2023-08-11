@@ -1,0 +1,804 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Epilogue:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&family=Lily+Script+One&family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@300;500&family=Oleo+Script+Swash+Caps:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,400;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,400;1,600;1,700;1,800;1,900;1,1000&family=Quicksand:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/*set the scroll behavior to smooth*/
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --whiteColor: #fff;
+    --lightColor: #ebe0e0;
+    --brownColor: brown;
+    --blackColor: #000;
+    --font-size-head: 30px;
+    --font-size-paragraph: 17px;
+}
+/* Basic styles for the navigation */
+.nav-link {
+    background-color: #333;
+    padding-top: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; /* Ensure the navigation is above other content */
+}
+
+/* Center the navigation items */
+.nav-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add some padding to the sides */
+}
+
+/* Styles for the menu items */
+@media (min-width: 768px) {
+    .menu ul {
+        display: flex;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    
+}
+
+.menu a {
+    color: #ebe0e0;
+    text-decoration: none;
+}
+
+/* Center the login button */
+#logger{
+    
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        z-index: 99;
+        width: 50%; /* Hide the menu on larger screens */
+    }
+    .loggin{
+        display: flex;
+        padding-bottom: 15px;
+        align-items: center;
+    }
+    ul{
+padding: 20px 0;
+    }
+    li{
+        list-style: none;
+        padding-left: 20px;
+        font-weight: bold;
+        opacity: 0.7;
+        
+    }
+    a{
+      
+    }
+    .menu.show {
+        display: block; /* Show the menu when the button is clicked */
+        background-color: #333;
+        position: absolute;
+        top: 50px; /* Adjust this to match the height of your navbar */
+        right: 20px;
+    }
+    ul{
+        display: block;
+        width: 50%;
+    }
+    .menu.show a {
+        display: block;
+        color: #ebe0e0;
+        text-decoration: none;
+        padding: 10px;
+    }
+    .nav-part{
+        display: flex;
+        align-items: center;
+    }
+    .cent {
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Style the login button */
+    #centbtn {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        background-color: #ebe0e0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #333;
+        font-weight: bold;
+    }
+    /* Style the hamburger icon */
+#hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 10px;
+}
+#close-btn{
+    position: absolute;
+    color: #fff;
+}
+
+}
+.close-btn {
+    display: none; /* Initially hide the close button */
+    font-size: 24px;
+    color: #fff;
+    z-index: 99;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Display the close button when the menu is shown */
+.menu.show ~ .close-btn {
+    display: block;
+}
+
+
+
+
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none; /* Hide the menu on smaller screens */
+    }
+}
+
+.background{
+    background-color: #333;
+}
+.home-page{
+    padding-left: 30px;
+    top: 40px;
+    position: relative;
+    display: block;
+    font-size: var(--font-size-head);
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+
+.home-page p{
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.6;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+}
+.home{
+        justify-content: center;
+        background-image: url("backOne.jpg");
+        background-color: #837979;
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+        width: 100%;
+        height: 130vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+}
+.anime{
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -750px 0;
+    animation-duration: 2s;
+    animation: backcolor 5s linear alternate infinite;
+}
+@keyframes backcolor {
+    100%{
+        background-position: 0 0;
+    }
+    
+}
+
+@media  (min-width: 430px) and (max-width: 600px) {
+    .home-page h1{
+        max-width: 450px;
+        text-align: center;
+        line-height: 45px;
+        margin: auto;
+        font-size: 40px;
+    }
+    .home-page p{
+        max-width: 400px;
+        font-size: 16px;
+        padding-top: 10px;
+        margin: auto;
+    }
+    
+}
+@media  (max-width: 430px) {
+    .home-page h1{
+        max-width: 450px;
+        text-align: center;
+        line-height: 45px;
+        margin: auto;
+        font-size: 35px;
+    }
+    .home-page p{
+        max-width: 400px;
+        font-size: 16px;
+        padding-top: 10px;
+        margin: auto;
+    }
+    
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    .home-page h1{
+        max-width: 550px;
+        text-align: center;
+        line-height: 60px;
+        margin: auto;
+        font-size: 50px;
+    }
+    .home-page p{
+        max-width: 500px;
+        font-size: 20px;
+        padding-top: 15px;
+        margin: auto;
+    }
+    
+}
+
+.btn{
+    padding: 15px 65px;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 2px solid #d48216;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    font-size: var(--font-size-paragraph);
+    font-weight: bold;
+    transition: 1s all ease-in-out 0s;
+}
+#btnx{
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+.btn:hover::before{
+    right: unset;
+    left: 0;
+    width: 100%;
+
+}
+.btn::before{
+    content: "";
+    background-color: #e98a0e;
+    position: absolute;
+    left: unset;
+    top: 0;
+    color: #fff;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    border-radius: 30px;
+    transition: 0.6s all ease-in-out 0s;
+    height: 100%;
+    width: 0;
+}
+.home-page button{
+    
+
+}
+.home-page h1{
+    color: var(--lightColor);
+    text-transform: uppercase;
+}
+/*About section*/
+.flex2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@media (max-width: 1000px) {
+    .flex2{
+        display: block;
+        margin: auto;
+    }
+    .About{
+        padding: 0px 40px;
+    }
+    .About-top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .About-mid{
+        padding-left: 10px;
+    }
+    .About-text p{
+        width: 100%;
+        max-width: 500px;
+        opacity: 0.7;
+        margin: auto;
+        line-height: 30px;
+        text-align: center; 
+        padding-bottom: 25px;
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    .imageFirst{
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        display: block;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .About p{
+        width: 100%;
+        max-width: 400px;
+    }
+    .aboutimg{
+     
+    }
+    .imageFirst{
+        max-width: 550px;
+        width: 100%;
+       
+    }
+    .About-text p{
+        opacity: 0.7;
+        line-height: 28px;
+        
+    }
+    
+}
+@media (min-width: 600px) and (max-width: 1000px) {
+    
+    
+}
+.About{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.About-title h2{
+    padding-bottom: 8px;
+}
+.About-title p{
+    opacity: 0.4;
+    padding-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+/*services section*/
+
+@media (min-width: 1000px) {
+    .flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    } 
+    .services-box{
+        width: 27%;
+    }
+    .services-p{
+        width: 100%;
+        max-width: 400px;
+        padding: 10px ;
+        opacity: 0.6;
+        word-spacing: 3px;
+        font-size: 18px;
+        color: #fff;
+    }
+}
+    
+
+@media (max-width: 1000px) {
+    .flex{
+        display: block;
+        margin: auto;
+    }
+    .services-box{
+        width: 70%;
+        max-width: 400px;
+        margin: auto;
+        display: block;
+    }
+    .services-p{
+        font-size: 16px;
+        opacity: 0.7;
+        color: #fff;
+        padding: 10px 0px;
+    }
+}
+.services{
+    padding: 60px 0px;
+    background: url('volunteers-teaming-up-organize-donations-charity.jpg');
+    background-color: #837979;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+}
+.services-text{
+    text-align: center;
+    color: #fff;
+}
+.services-text p{
+    text-transform: uppercase;
+    opacity: 0.7;
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+.services-box{
+    margin: auto;
+    border: 2px solid #928e8e;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+.service-part{
+    border-radius: 10px;
+    padding: 30px 0px 30px 0px;
+    text-align: center;
+}
+.service-sect{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+.service-part h3{
+    text-align: center;
+}
+.service-sect{
+    
+}
+/*Help section*/
+.flex3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@media (max-width: 1000px){
+    .flex3{
+        display: block;
+        padding: 0px 40px;
+    }
+}
+.Help{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.Help-title h2{
+    padding-bottom: 8px;
+}
+@media (max-width: 1000px){
+    .Help-title{
+        text-align: center;
+    }
+    .Help-text{
+        text-align: center;
+        margin: auto;
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 25px;
+    }
+    .Help-text p{
+        margin: auto;
+    }
+    #btnz{
+        display: block;
+        margin: auto;
+
+    }
+    #imago{
+        padding-top: 35px;
+    }
+}
+.Help-title p{
+    opacity: 0.4;
+    padding-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.About-text{
+    
+}
+.Help-text p{
+    width: 100%;
+    opacity: 0.7;
+    line-height: 28px;
+    max-width: 550px;
+}
+#btnz{
+    color: #e98a0e;
+}
+#btnz:hover{
+    color: #fff;
+}
+
+/*projects section*/
+.video-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    padding-left: 60px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    background-blend-mode: darken;
+    color: #fff;
+}
+.content h2{
+    padding-bottom: 8px;
+}
+.bg-{
+    background-color: #f3b262;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    z-index: 1;
+    width: 30%;
+}
+.restorate{
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 12px;
+    padding-top: 3px;
+}
+.restore{
+    font-size: 20px;
+}
+.content p{
+    max-width: 600px;
+    width: 100%;
+    line-height: 30px;
+}
+video {
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-blend-mode: darken; /* Add the blend mode here */
+}
+#btnzz{
+    color: #000;
+    z-index: 99;
+    border: none;
+    background-color: #fff;
+}
+#btnzz:hover{
+border: 2px solid #fff;
+background-color: transparent;
+}
+.smile{
+    position: absolute;
+    right: 300px;
+    z-index: 99;
+}
+/*projects section*/
+.proj{
+    background-image: url('volunteers-teaming-up-organize-donations-charity.jpg');
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 100vh;
+
+}
+/*contact section*/
+.name{
+    background-color: transparent;
+    border-bottom: 1px solid #d48216;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+  }
+  @media (max-width: 1000px) {
+    .conten{
+        width: 70%;
+        margin: auto;
+      }
+      .conten h2{
+        text-align: center;
+      }
+      #butt{
+        display: block;
+        margin: auto;
+      }
+      #email{
+        margin-bottom: 40px;
+        
+      }
+      .better{
+        width: 100%;
+        max-width: 700px;
+        margin-top: 60px;
+    }
+    
+  }
+  @media (min-width: 1000px) {
+    .conten{
+        width: 30%;
+      }
+      .better{
+        width: 700px;
+    }
+    
+  }
+  
+  #email{
+    margin-top: 10px;
+  }
+  input {
+    width: 100%;
+    border: none;
+    font-size: var(--font-size-paragraph);
+    padding: 5px 0;
+    opacity: 0.7;
+    background: none;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .buyt{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+ 
+  .conten h2{
+    font-size: var(--font-size-head);
+    padding-bottom: 30px;
+  }
+  #butt:hover {
+    color: #fff;
+  }
+
+  .contact-section {
+    padding: 20px 60px;
+    margin-top: 40px;
+  }
+  #butt{
+    color: #d48216;
+    
+  }
+  #btm{
+   
+  }
+  .cont-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (max-width: 1000px) {
+    .cont-flex{
+        display: block;
+    }
+    
+  }
+  
+
+
+  /*footer*/
+  .footer {
+    background-color: #333;
+    color: #ebe0e0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 1000px) {
+    .footer-content{
+        display: block;
+    }
+    .footer-content p{
+        padding-bottom: 15px;
+        font-weight: bold;
+        opacity: 0.7;
+        word-spacing: 2px;
+    }
+    .footer-links{
+        display: block;
+        line-height: 30px;
+        margin: auto;
+        text-align: center;
+    }
+    .footer{
+        padding: 35px 30px 25px 30px;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .footer-links{
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .footer{
+        padding: 40px ;
+    }
+}
+
+.footer-links {
+    list-style: none;
+    
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    color: #ebe0e0;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
